@@ -1,0 +1,13 @@
+
+@{
+    ViewData["Title"] = "This is the content page that displays the file content";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    @foreach(string text in ViewBag.Data)
+    {
+        <h2>@text</h2>
+    }
+</div>

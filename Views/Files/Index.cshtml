@@ -1,0 +1,18 @@
+@model string []
+
+@{
+    ViewData["Title"] = "This is the index page that displays the file name";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+
+<ul>
+    @for(var i = 0; i < Model.Length; i++) {
+        int id = i + 1;
+        <li><a asp-controller="Files" class="btn"
+                asp-action="Content"
+                asp-route-id="@id">@Model[i].Substring(10)</a></li>
+    }
+</ul>
